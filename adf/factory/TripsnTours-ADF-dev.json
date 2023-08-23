@@ -1,0 +1,9 @@
+{
+	"name": "TripsnTours-ADF-dev",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "04dc04cc-8bea-43a2-ba61-b4ba06a19f24",
+		"tenantId": "650f5882-90c1-4e7b-b926-0bd75e8270cb"
+	}
+}
