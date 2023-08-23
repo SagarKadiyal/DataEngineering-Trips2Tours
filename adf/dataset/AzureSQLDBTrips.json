@@ -1,0 +1,16 @@
+{
+	"name": "AzureSQLDBTrips",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSQLDatabaseTrips",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "staging",
+			"table": "hotelsStating"
+		}
+	}
+}
