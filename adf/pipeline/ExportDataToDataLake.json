@@ -54,6 +54,12 @@
 				]
 			}
 		],
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "dimCustomer"
+			}
+		},
 		"annotations": []
 	}
 }

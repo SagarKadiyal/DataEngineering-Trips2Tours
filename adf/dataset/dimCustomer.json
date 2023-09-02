@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "dimCustomer.parquet",
 				"folderPath": "SourceFiles",
 				"fileSystem": "tripsntours"
 			},
