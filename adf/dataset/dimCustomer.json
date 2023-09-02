@@ -1,0 +1,20 @@
+{
+	"name": "dimCustomer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLSGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "SourceFiles",
+				"fileSystem": "tripsntours"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
