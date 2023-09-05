@@ -1,0 +1,21 @@
+{
+	"name": "dimRoomType",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLSGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dim_roomType.parquet",
+				"folderPath": "SourceFiles",
+				"fileSystem": "tripsntours"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

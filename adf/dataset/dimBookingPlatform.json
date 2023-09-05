@@ -1,0 +1,21 @@
+{
+	"name": "dimBookingPlatform",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLSGen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dimBookingPlatform.parquet",
+				"folderPath": "SourceFiles",
+				"fileSystem": "tripsntours"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
