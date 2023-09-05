@@ -75,7 +75,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select TraverlerId\n\t  ,[email]\n      ,[phone]\nfrom [staging].[hotelsStating]",
+						"sqlReaderQuery": "select [customer_id]\n, [email]\n      ,[phone]\nfrom [staging].[hotelsStating]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
