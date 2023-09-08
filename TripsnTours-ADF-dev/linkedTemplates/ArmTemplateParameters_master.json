@@ -11,6 +11,12 @@
 		"AzureSQLDatabaseTrips_connectionString": {
 			"value": ""
 		},
+		"ADLSGen2_accountKey": {
+			"value": ""
+		},
+		"ADLSGen2_properties_typeProperties_url": {
+			"value": "https://dlsadatageeksdev.dfs.core.windows.net/"
+		},
 		"containerUri": {
 			"value": ""
 		},
