@@ -167,7 +167,7 @@
 								"sink": {
 									"type": "AzureSqlSink",
 									"preCopyScript": {
-										"value": "TRUNCATE TABLE 'staging.' + @{variables('DestTableName')}",
+										"value": "TRUNCATE TABLE staging.@{variables('DestTableName')}",
 										"type": "Expression"
 									},
 									"writeBehavior": "insert",
