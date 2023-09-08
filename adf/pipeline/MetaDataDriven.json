@@ -89,7 +89,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select destName from elt.Control_Table\nwhere sourceName = '@{item().FileName}'",
+										"value": "select destName from elt.Control_Table\nwhere sourceName = '@{item().name}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
