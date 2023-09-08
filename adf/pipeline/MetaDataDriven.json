@@ -120,7 +120,7 @@
 							"typeProperties": {
 								"variableName": "DestTableName",
 								"value": {
-									"value": "@activity('Lookup1').output.firstRow",
+									"value": "@activity('Lookup1').output.firstRow.DestName",
 									"type": "Expression"
 								}
 							}
@@ -152,7 +152,7 @@
 										"recursive": true,
 										"wildcardFolderPath": "SourceFiles",
 										"wildcardFileName": {
-											"value": "@variables('FileName')",
+											"value": "@item().name",
 											"type": "Expression"
 										},
 										"enablePartitionDiscovery": false
