@@ -61,7 +61,7 @@
 							"typeProperties": {
 								"variableName": "FileName",
 								"value": {
-									"value": "@item().FileName",
+									"value": "@item().name",
 									"type": "Expression"
 								}
 							}
