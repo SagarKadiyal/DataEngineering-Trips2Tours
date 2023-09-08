@@ -89,7 +89,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select destName from elt.Control_Table\nwhere sourceName = '@{item().name}'",
+										"value": "select DestName from elt.Control_Table\nwhere sourceName = '@{item().name}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -120,7 +120,7 @@
 							"typeProperties": {
 								"variableName": "DestTableName",
 								"value": {
-									"value": "@activity('Lookup1').output.firstRow.destName",
+									"value": "@activity('Lookup1').output.firstRow.DestName",
 									"type": "Expression"
 								}
 							}
