@@ -53,6 +53,8 @@
 						{
 							"name": "Set variable1",
 							"type": "SetVariable",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [],
 							"policy": {
 								"secureOutput": false,
@@ -90,7 +92,7 @@
 								"source": {
 									"type": "AzureSqlSource",
 									"sqlReaderQuery": {
-										"value": "select mappingId,DestName from elt.Control_Table\nwhere sourceName = '@{item().name}'",
+										"value": "select DestName from elt.Control_Table\nwhere sourceName = '@{item().name}'",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00",
@@ -121,7 +123,7 @@
 							"typeProperties": {
 								"variableName": "DestTableName",
 								"value": {
-									"value": "@activity('Lookup1').output.firstRow.DestName",
+									"value": "@activity('Lookup1').output.firstRow\n",
 									"type": "Expression"
 								}
 							}
