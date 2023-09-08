@@ -152,7 +152,7 @@
 										"recursive": true,
 										"wildcardFolderPath": "SourceFiles",
 										"wildcardFileName": {
-											"value": "@item().FileName",
+											"value": "@variables('FileName')",
 											"type": "Expression"
 										},
 										"enablePartitionDiscovery": false
