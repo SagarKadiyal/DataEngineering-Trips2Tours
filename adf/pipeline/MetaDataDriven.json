@@ -120,7 +120,7 @@
 							"typeProperties": {
 								"variableName": "DestTableName",
 								"value": {
-									"value": "@activity('Lookup1').output",
+									"value": "@activity('Lookup1').output.firstRow",
 									"type": "Expression"
 								}
 							}
