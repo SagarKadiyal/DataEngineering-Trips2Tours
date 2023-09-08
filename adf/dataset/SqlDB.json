@@ -1,0 +1,24 @@
+{
+	"name": "SqlDB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSQLDatabaseTrips",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TargetTable": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "staging",
+			"table": {
+				"value": "@dataset().TargetTable",
+				"type": "Expression"
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"name": "AzureControlTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSQLDatabaseTrips",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "MappingId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SourceName",
+				"type": "varchar"
+			},
+			{
+				"name": "DestName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "elt",
+			"table": "Control_Table"
+		}
+	}
+}
