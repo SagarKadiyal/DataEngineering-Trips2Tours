@@ -311,6 +311,8 @@
 						{
 							"name": "DeleteFiles",
 							"type": "Delete",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [
 								{
 									"activity": "MoveFiles",
