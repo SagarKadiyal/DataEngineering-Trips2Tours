@@ -263,7 +263,7 @@
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings",
 										"copyBehavior": {
-											"value": "@{item().name}_utcnow()",
+											"value": "@{item().name}_@{utcnow()}",
 											"type": "Expression"
 										}
 									},
