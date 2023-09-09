@@ -262,10 +262,7 @@
 									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings",
-										"copyBehavior": {
-											"value": "@{item().name}_@{utcnow()}",
-											"type": "Expression"
-										}
+										"copyBehavior": "PreserveHierarchy"
 									},
 									"formatSettings": {
 										"type": "ParquetWriteSettings"
