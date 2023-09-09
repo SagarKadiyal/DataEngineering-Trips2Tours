@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "SourceFiles",
 				"fileSystem": "tripsntours"
 			},
 			"compressionCodec": "snappy"
