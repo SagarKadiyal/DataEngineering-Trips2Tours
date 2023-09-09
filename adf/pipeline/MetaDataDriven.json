@@ -159,7 +159,10 @@
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
-										"wildcardFolderPath": "SourceFiles",
+										"wildcardFolderPath": {
+											"value": "@pipeline().parameters.SourceFilePath",
+											"type": "Expression"
+										},
 										"wildcardFileName": {
 											"value": "@item().name",
 											"type": "Expression"
@@ -194,7 +197,13 @@
 							"inputs": [
 								{
 									"referenceName": "SourceFilePath",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": {
+											"value": "@pipeline().parameters.SourceFilePath",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
@@ -235,19 +244,62 @@
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
-										"wildcardFileName": "*.parquet",
+										"wildcardFolderPath": {
+											"value": "@pipeline().parameters.SourceFilePath",
+											"type": "Expression"
+										},
+										"wildcardFileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										},
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
 										"type": "ParquetReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings",
+										"copyBehavior": "FlattenHierarchy"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
 									"referenceName": "SourceFilePath",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": {
+											"value": "@pipeline().parameters.SourceFilePath",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "SourceFilePath",
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": {
+											"value": "@pipeline().parameters.ProcessedFilePath",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
