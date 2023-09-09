@@ -1,0 +1,27 @@
+{
+	"name": "ADLSGen2_Root",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLSGen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().FolderName",
+					"type": "Expression"
+				},
+				"fileSystem": "tripsntours"
+			}
+		},
+		"schema": []
+	}
+}
