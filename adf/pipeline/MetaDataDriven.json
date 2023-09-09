@@ -296,7 +296,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"FolderName": {
-											"value": "@concat(pipeline().parameters.ProcessedFilePath,'/',pipeline().TriggerTime)",
+											"value": "pipeline().parameters.ProcessedFilePath/\n@{formatDateTime(pipeline().TriggerTime,'yyyy-mm-dd')}",
 											"type": "Expression"
 										}
 									}
