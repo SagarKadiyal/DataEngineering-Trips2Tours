@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "SourceFilePath",
+						"referenceName": "ADLSGen2_Root",
 						"type": "DatasetReference",
 						"parameters": {
 							"FolderName": {
