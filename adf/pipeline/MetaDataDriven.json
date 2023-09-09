@@ -262,7 +262,12 @@
 									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings",
-										"copyBehavior": "FlattenHierarchy"
+										"copyBehavior": "PreserveHierarchy",
+										"metadata": [
+											{
+												"value": ""
+											}
+										]
 									},
 									"formatSettings": {
 										"type": "ParquetWriteSettings"
