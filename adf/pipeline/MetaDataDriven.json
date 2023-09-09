@@ -302,6 +302,48 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "DeleteFiles",
+							"type": "Delete",
+							"dependsOn": [
+								{
+									"activity": "MoveFiles",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "SourceFilePath",
+									"type": "DatasetReference",
+									"parameters": {
+										"FolderName": {
+											"value": "@pipeline().parameters.SourceFilePath",
+											"type": "Expression"
+										}
+									}
+								},
+								"enableLogging": true,
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": false,
+									"wildcardFileName": {
+										"value": "@{item().name}",
+										"type": "Expression"
+									},
+									"enablePartitionDiscovery": false
+								}
+							}
 						}
 					]
 				}
