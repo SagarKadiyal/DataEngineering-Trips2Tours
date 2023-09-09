@@ -5,16 +5,6 @@
 			"referenceName": "ADLSGen2",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"SourceFilePath": {
-				"type": "string",
-				"defaultValue": "SourceFiles"
-			},
-			"ProcessedFilePath": {
-				"type": "string",
-				"defaultValue": "ProcessedFiles"
-			}
-		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
