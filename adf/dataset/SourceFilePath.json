@@ -8,6 +8,9 @@
 		"parameters": {
 			"FolderName": {
 				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -20,8 +23,7 @@
 					"type": "Expression"
 				},
 				"fileSystem": "tripsntours"
-			},
-			"compressionCodec": "snappy"
+			}
 		},
 		"schema": []
 	}
