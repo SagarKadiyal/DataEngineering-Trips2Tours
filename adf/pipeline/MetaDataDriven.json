@@ -296,7 +296,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"FolderName": {
-											"value": "@pipeline().parameters.ProcessedFilePath",
+											"value": "@concat(pipeline().parameters.ProcessedFilePath,'_',pipeline().TriggerTime)",
 											"type": "Expression"
 										}
 									}
@@ -366,6 +366,9 @@
 				"type": "String"
 			},
 			"DestTableName": {
+				"type": "String"
+			},
+			"CurrentDate": {
 				"type": "String"
 			}
 		},
