@@ -6,10 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"SourceFileFolder": {
-				"type": "string"
-			},
-			"ProcessedFolder": {
+			"FolderName": {
 				"type": "string"
 			}
 		},
