@@ -292,7 +292,7 @@
 											"type": "Expression"
 										},
 										"FileName": {
-											"value": "@{replace(item().name,'.parquet','')}_@{formatDateTime(convertTimeZone(utcnow(),'UTC','Eastern Standard Time'),'yyyyMMdd_HHmmss')}",
+											"value": "@{replace(item().name,'.parquet','')}_@{formatDateTime(convertTimeZone(utcnow(),'UTC','Eastern Standard Time'),'yyyyMMdd_HHmmss')}.parquet",
 											"type": "Expression"
 										}
 									}
