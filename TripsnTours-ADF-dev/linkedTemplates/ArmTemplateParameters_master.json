@@ -5,13 +5,13 @@
 		"factoryName": {
 			"value": "TripsnTours-ADF-dev"
 		},
+		"ADLSGen2_accountKey": {
+			"value": ""
+		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
 		},
 		"AzureSQLDatabaseTrips_connectionString": {
-			"value": ""
-		},
-		"ADLSGen2_accountKey": {
 			"value": ""
 		},
 		"ADLSGen2_properties_typeProperties_url": {
